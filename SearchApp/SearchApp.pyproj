@@ -4,7 +4,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>SearchApp</Name>
     <RootNamespace>SearchApp</RootNamespace>
-    <InterpreterId>{a1095fba-4146-4a41-a826-c163cf44b590}</InterpreterId>
+    <InterpreterId>{2f222b9b-2cc5-4533-829a-86964031f876}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -35,6 +35,9 @@
     <Compile Include="app\views.py" />
     <Compile Include="app\__init__.py" />
     <Compile Include="manage.py" />
+    <Compile Include="SearchApp\local_settings.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SearchApp\Search_Twitter.py">
       <SubType>Code</SubType>
     </Compile>
@@ -96,16 +99,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env\">
-      <Id>{a1095fba-4146-4a41-a826-c163cf44b590}</Id>
-      <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
+    <Interpreter Include="env1\">
+      <Id>{2f222b9b-2cc5-4533-829a-86964031f876}</Id>
+      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
       <Version>3.4</Version>
-      <Description>env (Python 3.4)</Description>
+      <Description>env1 (Python 64-bit 3.4)</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <LibraryPath>Lib\</LibraryPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X86</Architecture>
+      <Architecture>Amd64</Architecture>
     </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />

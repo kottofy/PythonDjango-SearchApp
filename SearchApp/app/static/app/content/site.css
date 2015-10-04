@@ -1,5 +1,21 @@
-﻿body {
-    padding-top: 50px;
+﻿.enter-query-container {
+    width: 100% !important;
+    max-width: 1800px !important;
+    background: turquoise;
+}
+
+.results-container {
+    width: 95% !important;
+}
+
+.center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+}
+
+body {
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 

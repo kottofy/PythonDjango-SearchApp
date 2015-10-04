@@ -27,14 +27,14 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="c:\users\kristin\documents\visual studio 2015\Projects\SearchApp\SearchApp\env"
+$env:VIRTUAL_ENV="C:\Users\kotto_000\Documents\GitHubVisualStudio\PythonDjango-SearchApp\SearchApp\env1"
 
 # Set the prompt to include the env name
 # Make sure _OLD_VIRTUAL_PROMPT is global
 function global:_OLD_VIRTUAL_PROMPT {""}
 copy-item function:prompt function:_OLD_VIRTUAL_PROMPT
 function global:prompt {
-    Write-Host -NoNewline -ForegroundColor Green '(env) '
+    Write-Host -NoNewline -ForegroundColor Green '(env1) '
     _OLD_VIRTUAL_PROMPT
 }
 

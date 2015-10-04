@@ -1,10 +1,8 @@
 ﻿from django.conf import settings
 import tweepy
 
-
 def search_twitter(word):
     twitter_settings = settings.PROVIDER_CREDENTIALS['TWITTER']
-
     consumer_key = twitter_settings['consumer_key']
     consumer_secret = twitter_settings['consumer_secret']
     access_token = twitter_settings['access_token']

@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=c:\users\kristin\documents\visual studio 2015\Projects\SearchApp\SearchApp\env"
+set "VIRTUAL_ENV=C:\Users\kotto_000\Documents\GitHubVisualStudio\PythonDjango-SearchApp\SearchApp\env1"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
@@ -14,7 +14,7 @@ if defined _OLD_VIRTUAL_PYTHONHOME (
 )
 
 set "_OLD_VIRTUAL_PROMPT=%PROMPT%"
-set "PROMPT=(env) %PROMPT%"
+set "PROMPT=(env1) %PROMPT%"
 
 if defined PYTHONHOME (
     set "_OLD_VIRTUAL_PYTHONHOME=%PYTHONHOME%"
