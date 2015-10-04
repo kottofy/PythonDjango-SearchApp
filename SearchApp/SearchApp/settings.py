@@ -1,4 +1,4 @@
-"""
+﻿"""
 Django settings for SearchApp project.
 """
 
@@ -168,3 +168,9 @@ LOGGING = {
 
 # Specify the default test runner.
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
+try:
+    from SearchApp.local_settings import *
+except Exception as e:
+    print(e)
+    pass

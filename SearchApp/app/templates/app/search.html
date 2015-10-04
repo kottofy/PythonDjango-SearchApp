@@ -1,0 +1,59 @@
+﻿{% extends 'app/layout.html' %}
+
+{% block content %}
+    <div class="enter-query container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="/" method="GET">
+                    <h2>Enter a query to get results from Twitter and Wikipedia</h2>
+                    <input id="query" type="text" name="query"> <input type="submit">
+                </form>
+             </div>
+        </div>
+    </div>
+
+{% if word %}
+<div class="twitter-results col-xs-12 col-md-6">
+        {% if word %}
+            <h3>Twitter Results for "{{word}}":</h3>
+            <h4><a href="http://twitter.com/search?q=/{{word}}">See Results on Twitter</a></h4>
+        {% endif %}
+        {% for tweet in twitter_results %}
+            <div class="panel panel-default">
+              <div class="panel-body">
+                  <div class="row">
+                      <div class="col-xs-2">
+                          <a href="http://twitter.com/{{tweet.author.screen_name}}"><img class="img-responsive" src="{{tweet.author.profile_image_url}}" alt="@{{tweet.author.screen_name}}" /></a>
+                      </div>
+                      <div class="col-xs-10">
+                          <b><a href="http://twitter.com/{{tweet.author.screen_name}}">@{{tweet.author.screen_name}}</a></b>
+                          <p>{{tweet.text}}</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="wiki-results col-xs-12 col-md-6">
+        {% if word %}
+            <h3>Wikipedia Results for "{{word}}":</h3> 
+            <h4><a href="http://wikipedia.org/wiki/{{word}}">See Results on Wikipedia</a></h4>
+        {% endif %}
+        {% for wiki in wiki_results %}
+            <div class="panel panel-default">
+              <div class="panel-body">
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <!-- TODO: wikipedia href link-->
+                          <!-- TODO: wikipedia disambiguation error, ex. query=banana -->
+                                <b><a href="{{wiki.url}}">{{wiki.title}}</a></b>
+                                <p class="wiki-text">{{wiki.summary}}</p> 
+                      </div>
+                  </div>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% endblock %}
