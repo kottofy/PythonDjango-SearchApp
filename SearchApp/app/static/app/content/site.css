@@ -4,6 +4,26 @@
     padding-top: 10px !important;
 }
 
+.form-control:focus {
+    border-color: teal !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: turquoise !important;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: turquoise !important;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: turquoise !important;
+}
+
 .navbar {
     padding-left: 20px;
     padding-right: 20px;

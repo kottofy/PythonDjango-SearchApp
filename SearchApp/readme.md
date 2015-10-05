@@ -90,6 +90,6 @@ as of 10/5/15 11:54 am EST
 3. Redirect to pretty error page when issues are encountered.
 4. Create alert system so admin can know real-time errors.
 5. Have search.html HTML5 validated.
-~~6. Figure out how to make Twitter results all the same for a particular query.~~
+6. ~~Figure out how to make Twitter results all the same for a particular query.~~ Now pulls recent updates!
 7. Create DisambiguationError handling function for code readability. 
 8. (Optional-speed up server response preferred!) Display "Working on it..." type of message when query is being processed.
