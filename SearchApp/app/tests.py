@@ -5,7 +5,7 @@ when you run "manage.py test".
 
 import django
 from django.test import TestCase
-import unittest
+from SearchApp.Search_Twitter import auth_twitter, get_twitter_api
 
 # TODO: Configure your database in settings.py and sync before running tests.
 
@@ -19,17 +19,30 @@ class ViewTest(TestCase):
             super(ViewTest, cls).setUpClass()
             django.setup()
 
-    def test_home(self):
-        """Tests the home page."""
-        response = self.client.get('/')
-        self.assertContains(response, 'Home Page', 1, 200)
+    def test_search(self):
+        """Tests the search page."""
+        response = self.client.get('/query')
+        self.assertContains(response, status_code = 200)
 
-    def test_contact(self):
-        """Tests the contact page."""
-        response = self.client.get('/contact')
-        self.assertContains(response, 'Contact', 3, 200)
+class TwitterTest(TestCase):
+    def test_twitter_api_auth(self):
+        """Tests to ensure getting twitter api assigns correct auth data"""
+        PROVIDER_CREDENTIALS = {}
+        PROVIDER_CREDENTIALS['TWITTER'] = {}
+        PROVIDER_CREDENTIALS['TWITTER']['consumer_key'] = '111'
+        PROVIDER_CREDENTIALS['TWITTER']['consumer_secret'] = '222'
+        PROVIDER_CREDENTIALS['TWITTER']['access_token'] = '333'
+        PROVIDER_CREDENTIALS['TWITTER']['access_token_secret'] = '444'
+        twitter_settings = PROVIDER_CREDENTIALS['TWITTER']
+        api = get_twitter_api(twitter_settings)
 
-    def test_about(self):
-        """Tests the about page."""
-        response = self.client.get('/about')
-        self.assertContains(response, 'About', 3, 200)
+        self.assertEqual(api.auth.consumer_key, b'111')
+        self.assertEqual(api.auth.consumer_secret, b'222')
+        self.assertEqual(api.auth.access_token, '333')
+        self.assertEqual(api.auth.access_token_secret, '444')
+
+    def test_twitter_not_None_auth(self):
+        """Tests to ensure getting twitter authentication settings is returning information"""
+        twitter_settings = auth_twitter()
+        self.assertIsNotNone(twitter_settings)
+

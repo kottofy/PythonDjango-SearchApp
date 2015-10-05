@@ -8,8 +8,8 @@ and [Twitter](https://twitter.com/).
 
 # Getting Twitter Results
 The Twitter search is completed through [Tweepy](http://tweepy.readthedocs.org/en/v3.4.0/). This applications is
-currently set to use Twitter's REST API which returns a limited amount of results (by age of tweet) and does not stream
-live data. This application has also capped the amount of results to return from the search.
+currently set to use Twitter's REST API which returns a limited amount of results (within a week or so) and does not stream
+live data. It is set to deliver the most recent results. This application has also capped the amount of results to return from the search.
 
 # Getting Wikipedia Results
 The Wikipedia search is completed through [Python's Wikipedia Package](https://pypi.python.org/pypi/wikipedia/).
@@ -23,6 +23,7 @@ this error can happen again on one of those pages, but this application will onl
 3. Site is responsive and mobile friendly with a Bootstrap collapsable menu.
 4. Simple Django setup with templates, forms, views, etc. allows for pretty easy to read code.
 5. Twitter Authentication details are not uploaded to GitHub.
+6. Uses HTML5 to require an input.
 
 # Performance Negatives (TODOs)
 1. Asks for twitter authorization at every search. Twitter search is fast but display of results is slow for Twitter and Wikipedia results.

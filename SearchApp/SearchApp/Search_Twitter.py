@@ -1,20 +1,15 @@
 ﻿from django.conf import settings
 import tweepy
 
-def search_twitter(word):
-
-    twitter_results = []
+def get_twitter_api(twitter_settings):
+    
+    api = []
 
     try:
-        try:
-            twitter_settings = settings.PROVIDER_CREDENTIALS['TWITTER']
-            consumer_key = twitter_settings['consumer_key']
-            consumer_secret = twitter_settings['consumer_secret']
-            access_token = twitter_settings['access_token']
-            access_token_secret = twitter_settings['access_token_secret']
-        except:
-            print("Unable to authenticate twitter")
-            pass
+        consumer_key = twitter_settings['consumer_key']
+        consumer_secret = twitter_settings['consumer_secret']
+        access_token = twitter_settings['access_token']
+        access_token_secret = twitter_settings['access_token_secret']
 
         # Create auth token
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -22,7 +17,31 @@ def search_twitter(word):
     
         # Get API Handler
         api = tweepy.API(auth)
-    
+    except:
+        print("Error getting Twitter API")
+        pass
+    return api
+
+def auth_twitter():
+
+    twitter_settings = []
+
+    try:
+        twitter_settings = settings.PROVIDER_CREDENTIALS['TWITTER']
+       
+    except:
+        print("Unable to authenticate twitter")
+        pass
+
+    return twitter_settings
+
+def search_twitter(word):
+
+    twitter_results = []
+
+    try:
+        twitter_settings = auth_twitter()
+        api = get_twitter_api(twitter_settings)
         twitter_results = api.search(q=word, count=25, result_type="recent")
     except:
         print("Something went wrong getting Twitter results")
