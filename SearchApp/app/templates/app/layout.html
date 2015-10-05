@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="/static/app/content/site.css" />
     <link rel="stylesheet" href="/static/app/content/bootstrap.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="../../static/app/scripts/bootstrap.min.js"></script>
 </head>
 <body>
-    <div
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1><a href="">Search Twitter and Wikipedia</a></h1>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><h2><a href="http://kristinottofysearchapp.azurewebsites.net">Home<span class="sr-only">(current)</span></a></h2></li>
+                    <li><h2><a href="https://github.com/kottofy/PythonDjango-SearchApp">About<span class="sr-only">(current)</span></a></h2></li>
+                    <li><h2><a href="https://github.com/kottofy/PythonDjango-SearchApp">Code<span class="sr-only">(current)</span></a></h2></li>
+                    <li><h2><a href="http://kristinottofy.com">Author<span class="sr-only">(current)</span></a></h2></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     {% block content %}{% endblock %}
 </body>
 </html>
+
+{#TODO: Add nav bar with links Home (/), Code (github.com/kottofy), Creator (kristinottofy.com), possibly about page#}

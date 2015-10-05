@@ -64,6 +64,9 @@
   <ItemGroup>
     <Content Include="app\templates\app\search.html" />
     <None Include="kristinottofysearchapp.pubxml" />
+    <Content Include="readme.md">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
