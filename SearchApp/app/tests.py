@@ -6,6 +6,8 @@ when you run "manage.py test".
 import django
 from django.test import TestCase
 from SearchApp.Search_Twitter import auth_twitter, get_twitter_api
+from SearchApp.Search_Wikipedia import search_wikipedia
+import wikipedia
 
 # TODO: Configure your database in settings.py and sync before running tests.
 
@@ -46,3 +48,12 @@ class TwitterTest(TestCase):
         twitter_settings = auth_twitter()
         self.assertIsNotNone(twitter_settings)
 
+class WikipediaTest(TestCase):
+    def test_wikipedia_results_is_none(self):
+        """Tests no results are returned from Wikipedia"""
+        wiki_results = search_wikipedia('kristinottofy');
+        self.assertEquals(wiki_results, [])
+
+    def test_wikipedia_raises_disambiguation_error(self):
+        """Tests results are returned from Wikipedia"""
+        self.assertRaises(wikipedia.DisambiguationError, wiki_results=search_wikipedia('banana'))
