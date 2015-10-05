@@ -8,6 +8,16 @@
     border-color: teal !important;
 }
 
+.navbar-form .form-control {
+    width: 150px;
+}
+
+@media (max-width: 767px) {
+    .navbar-form .form-control {
+        width: 100% !important;
+    }
+}
+
 .navbar-default .navbar-toggle .icon-bar {
     background-color: black !important;
 }
@@ -24,44 +34,74 @@
     border-color: turquoise !important;
 }
 
+.navbar-form {
+    padding-top: 10px !important;
+}
+
 .navbar {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     background-color: turquoise !important;
     border: none !important;
 }
 
 .link a {
-    color: black;
-    padding-top: 5px !important;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 18px !important;
+    color: black !important;
+    padding-left: 8px !important;
 }
 
 .link a:hover {
+    font-size: 18px !important;
     color: white !important;
     text-decoration: none !important;
-    padding-top: 5px !important;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px !important;
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+    .link a {
+        font-size: 24px !important;
+        padding-left: 10px !important;
+    }
+    .link a:hover {
+        font-size: 24px !important;
+        padding-left: 10px !important;
+    }
+    .navbar-form .form-control {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 1100px) {
+    .link a {
+        font-size: 30px !important;
+        padding-left: 14px !important;
+    }
+    .link a:hover {
+        font-size: 30px !important;
+        padding-left: 14px !important;
+    }
+    .title a{
+        font-size: 30px !important;
+    }
+
+    .title a:hover{
+        font-size: 30px !important;
+    }
+    .navbar-form .form-control {
+        width: 100% !important;
+    }
 }
 
 .title a{
-    font-size: 30px !important;
+    font-size: 24px;
     color: black !important;
-    padding-top: 5px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
 }
 
 .title a:hover{
-    font-size: 30px !important;
+    font-size: 24px;
     color: white !important;
     text-decoration: none !important;
-    padding-top: 5px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
 }
 
 h1, h2, h3, h4 {
@@ -79,7 +119,6 @@ h4 a:hover, h5 a:hover {
 
 .enter-query-container {
     width: 100% !important;
-    max-width: 1800px !important;
     background: turquoise;
 }
 
