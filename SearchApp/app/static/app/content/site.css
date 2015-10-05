@@ -1,4 +1,8 @@
-﻿.enter-query-container {
+﻿h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.enter-query-container {
     width: 100% !important;
     max-width: 1800px !important;
     background: turquoise;

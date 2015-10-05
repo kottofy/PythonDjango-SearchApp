@@ -6,6 +6,7 @@
     <RootNamespace>SearchApp</RootNamespace>
     <InterpreterId>{2f222b9b-2cc5-4533-829a-86964031f876}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
+    <NameOfLastUsedPublishProfile>kristinottofysearchapp</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -62,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\templates\app\search.html" />
+    <None Include="kristinottofysearchapp.pubxml" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
