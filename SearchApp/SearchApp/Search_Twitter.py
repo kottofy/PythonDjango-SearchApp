@@ -1,4 +1,6 @@
-﻿from django.conf import settings
+﻿#@author: Kristin Ottofy
+
+from django.conf import settings
 import tweepy
 
 def get_twitter_api(twitter_settings):

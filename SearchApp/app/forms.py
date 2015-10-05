@@ -17,6 +17,6 @@ class BootstrapAuthenticationForm(AuthenticationForm):
                                    'class': 'form-control',
                                    'placeholder':'Password'}))
 
-
+#@author: Kristin Ottofy
 class SearchForm (forms.Form):
     query = forms.CharField(label='query', max_length=100)

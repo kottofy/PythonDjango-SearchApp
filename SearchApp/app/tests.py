@@ -1,4 +1,5 @@
-﻿"""
+﻿#@author: Kristin Ottofy
+"""
 This file demonstrates writing tests using the unittest module. These will pass
 when you run "manage.py test".
 """
@@ -55,5 +56,5 @@ class WikipediaTest(TestCase):
         self.assertEquals(wiki_results, [])
 
     def test_wikipedia_raises_disambiguation_error(self):
-        """Tests results are returned from Wikipedia"""
+        """Tests disambiguation error is thrown"""
         self.assertRaises(wikipedia.DisambiguationError, wiki_results=search_wikipedia('banana'))

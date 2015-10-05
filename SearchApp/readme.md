@@ -6,6 +6,9 @@ This is a [Python](https://www.python.org/)/[Django](https://www.djangoproject.c
 This application takes input as a query and returns search results from [Wikipedia](https://www.wikipedia.org/) 
 and [Twitter](https://twitter.com/). 
 
+# Author
+Program was written by [Kristin Ottofy](http://kristinottofy.com)!
+
 # Getting Twitter Results
 The Twitter search is completed through [Tweepy](http://tweepy.readthedocs.org/en/v3.4.0/). This applications is
 currently set to use Twitter's REST API which returns a limited amount of results (within a week or so) and does not stream

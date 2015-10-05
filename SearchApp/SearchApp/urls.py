@@ -1,4 +1,5 @@
-﻿"""
+﻿#@author: Kristin Ottofy
+"""
 Definition of urls for SearchApp.
 """
 

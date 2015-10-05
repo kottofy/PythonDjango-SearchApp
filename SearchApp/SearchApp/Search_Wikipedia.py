@@ -1,4 +1,6 @@
-﻿import wikipedia
+﻿#@author: Kristin Ottofy
+
+import wikipedia
 
 def search_wikipedia(word):
     searchArr = wikipedia.search(word)
