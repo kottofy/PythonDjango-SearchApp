@@ -7,7 +7,8 @@ This application takes input as a query and returns search results from [Wikiped
 and [Twitter](https://twitter.com/). 
 
 # Author
-Program was written by [Kristin Ottofy](http://kristinottofy.com)!
+Program was written by [Kristin Ottofy](http://kristinottofy.com) with the help of [Visual Studio 2015](https://www.visualstudio.com/),
+and especially [Python Tools for Visual Studio](http://microsoft.github.io/PTVS/)!
 
 # Getting Twitter Results
 The Twitter search is completed through [Tweepy](http://tweepy.readthedocs.org/en/v3.4.0/). This applications is
