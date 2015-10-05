@@ -2,15 +2,27 @@
 http://kristinottofysearchapp.azurewebsites.net
 
 # About
-This application takes input as a query to search Wikipedia and Twitter. 
-The Twitter search is completed through Tweepy (http://tweepy.readthedocs.org/en/v3.4.0/).
-The Wikipedia search is completed through Python's Wikipedia API (https://pypi.python.org/pypi/wikipedia/).
+This is a [Python](https://www.python.org/)/[Django](https://www.djangoproject.com/) application.
+This application takes input as a query and returns search results from [Wikipedia](https://www.wikipedia.org/) 
+and [Twitter](https://twitter.com/). 
+
+# Getting Twitter Results
+The Twitter search is completed through [Tweepy](http://tweepy.readthedocs.org/en/v3.4.0/). This applications is
+currently set to use Twitter's REST API which returns a limited amount of results (by age of tweet) and does not stream
+live data. This application has also capped the amount of results to return from the search.
+
+# Getting Wikipedia Results
+The Wikipedia search is completed through [Python's Wikipedia Package](https://pypi.python.org/pypi/wikipedia/).
+Often, queries cause Disambiguation Errors. Currently, those are handled on a limited basis. Ex. if a query like 'banana'
+returns a DisambiguationError, the error is parsed and the available pages in the error are added to the results. Therefore,
+this error can happen again on one of those pages, but this application will only add so many results.
 
 # Performance Positives
-1. Handles no results receieved from either Twitter or Wikipedia by displaying message. If one API is down, the other will still work.
-2. Site is responsive and mobile friendly with a Bootstrap collapsable menu.
-3. Simple Django setup with templates, forms, views, etc. allows for pretty easy to read code.
-4. Twitter Authentication details are not uploaded to GitHub.
+1. Handles no results receieved from either Twitter or Wikipedia by displaying message.
+2. If one API is down, the other will still work.
+3. Site is responsive and mobile friendly with a Bootstrap collapsable menu.
+4. Simple Django setup with templates, forms, views, etc. allows for pretty easy to read code.
+5. Twitter Authentication details are not uploaded to GitHub.
 
 # Performance Negatives (TODOs)
 1. Asks for twitter authorization at every search. Twitter search is fast but display of results is slow for Twitter and Wikipedia results.
@@ -24,34 +36,43 @@ as of 10/5/15 11:54 am EST
 ### Should fix:
 - Eliminate render-blocking JavaScript and CSS in above-the-fold content
 - Reduce server response time
+
 ### Consider fixing:
 - Leverage browser caching
 - Optimize images
 - Minify JavaScript
 - Minify CSS
+
 ### Passed Rules:
 - Avoid landing page redirects
 - Enable compression
 - Minify HTML
 - Prioritize visible content
+
 ### User Experience:
+
 #### Consider Fixing:
 - Size tap targets appropriately
+
 #### Passed Rules:
 - Avoid app install interstitials that hide contentBETA
 - Avoid plugins
 - Configure the viewport
 - Size content to viewport
 - Use legible font sizes
+
 ## Desktop: 54/100
+
 ### Should fix:
 - Reduce server response time
+
 ### Consider fixing:
 - Eliminate render-blocking JavaScript and CSS in above-the-fold content
 - Leverage browser caching
 - Optimize images
 - Minify JavaScript
 - Minify CSS
+
 ### Passed Rules:
 - Avoid landing page redirects
 - Enable compression
@@ -64,4 +85,6 @@ as of 10/5/15 11:54 am EST
 3. Redirect to pretty error page when issues are encountered.
 4. Create alert system so admin can know real-time errors.
 5. Have search.html HTML5 validated.
-6. (Optional) Display "Working on it..." type of message when query is being processed.
+6. Figure out how to make Twitter results all the same for a particular query.
+7. Create DisambiguationError handling function for code readability. 
+8. (Optional-speed up server response preferred!) Display "Working on it..." type of message when query is being processed.
