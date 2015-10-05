@@ -169,6 +169,7 @@ LOGGING = {
 # Specify the default test runner.
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
+# Use local_settings.py -- not uploaded to Git!
 try:
     from SearchApp.local_settings import *
 except Exception as e:

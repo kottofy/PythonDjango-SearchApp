@@ -1,6 +1,6 @@
-import wikipedia
+﻿import wikipedia
 
-def searchWikipedia(word):
+def search_wikipedia(word):
     searchArr = wikipedia.search(word)
 
     wiki_results = []
@@ -23,5 +23,8 @@ def searchWikipedia(word):
                     wiki_results.append(wikipedia.page(item))
             except:
                 pass
+    
+    if not wiki_results:
+        wiki_results[0] = "Sorry. We are unable to retrieve Wikipedia data at this time. Please try again later"
 
     return wiki_results
