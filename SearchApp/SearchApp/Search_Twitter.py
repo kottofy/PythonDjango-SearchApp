@@ -2,6 +2,9 @@
 import tweepy
 
 def search_twitter(word):
+
+    twitter_results = []
+
     try:
         twitter_settings = settings.PROVIDER_CREDENTIALS['TWITTER']
         consumer_key = twitter_settings['consumer_key']
@@ -19,9 +22,6 @@ def search_twitter(word):
     api = tweepy.API(auth)
     
     twitter_results = api.search(q=word, count=25, result_type="recent")
-
-    if not twitter_results:
-        twitter_results[0] = "Sorry. We are unable to retrieve Twitter data at this moment. Please try again later."
 
     return twitter_results
 

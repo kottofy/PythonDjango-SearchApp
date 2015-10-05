@@ -9,6 +9,7 @@
 }
 
 .results-container {
+    max-width: 1400px !important;
     width: 95% !important;
 }
 

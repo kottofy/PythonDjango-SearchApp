@@ -28,43 +28,52 @@
         {% if word %}
             <div class="twitter-results col-xs-12 col-md-6">
                 {% if word %}
-                    <h2>Twitter Results for "{{word}}":</h2>
-                    <h3><a href="http://twitter.com/search?q=/{{word}}">See Results on Twitter</a></h3>
+                    <h2>Twitter Results for "{{word}}":</h2> 
                 {% endif %}
-                {% for tweet in twitter_results %}
-                    <div class="panel panel-default">
-                      <div class="panel-body">
-                          <div class="row">
-                              <div class="col-xs-2">
-                                  <a href="http://twitter.com/{{tweet.author.screen_name}}"><img class="img-responsive" src="{{tweet.author.profile_image_url}}" alt="@{{tweet.author.screen_name}}" /></a>
-                              </div>
-                              <div class="col-xs-10">
-                                  <h4><a href="http://twitter.com/{{tweet.author.screen_name}}">@{{tweet.author.screen_name}}</a></h4>
-                                  <h5>{{tweet.author.created_at.month}}/{{tweet.author.created_at.day}}/{{tweet.author.created_at.year}} {{tweet.author.created_at.hour}}:{{tweet.author.created_at.minute}}</h5>
-                                  <p>{{tweet.text}}</p>
+                {% if not twitter_results %}
+                    <h3>Sorry. We are unable to dislay Twitter Results. Please try a different query or try again later. Thanks! :)</h3>
+                {% else %}
+                    <h3><a href="http://twitter.com/search?q=/{{word}}">See Results on Twitter</a></h3>
+                    {% for tweet in twitter_results %}
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                              <div class="row">
+                                  <div class="col-xs-2">
+                                      <a href="http://twitter.com/{{tweet.author.screen_name}}"><img class="img-responsive" src="{{tweet.author.profile_image_url}}" alt="@{{tweet.author.screen_name}}" /></a>
+                                  </div>
+                                  <div class="col-xs-10">
+                                      <h4><a href="http://twitter.com/{{tweet.author.screen_name}}">@{{tweet.author.screen_name}}</a></h4>
+                                      <h5>{{tweet.author.created_at.month}}/{{tweet.author.created_at.day}}/{{tweet.author.created_at.year}} {{tweet.author.created_at.hour}}:{{tweet.author.created_at.minute}}</h5>
+                                      <p>{{tweet.text}}</p>
+                                  </div>
                               </div>
                           </div>
-                      </div>
-                    </div>
-                {% endfor %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
+            
             <div class="wiki-results col-xs-12 col-md-6">
                 {% if word %}
-                    <h2>Wikipedia Results for "{{word}}":</h2> 
-                    <h3><a href="http://wikipedia.org/wiki/{{word}}">See Results on Wikipedia</a></h3>
+                    <h2>Wikipedia Results for "{{word}}":</h2>
                 {% endif %}
-                {% for wiki in wiki_results %}
-                    <div class="panel panel-default">
-                      <div class="panel-body">
-                          <div class="row">
-                              <div class="col-xs-12">
-                                <h4><a href="{{wiki.url}}">{{wiki.title}}</a></h4>
-                                <p class="wiki-text">{{wiki.summary}}</p> 
+                {% if not wiki_results %}
+                    <h3>Sorry. We are unable to dislay Wikipedia Results. Please try a different query or try again later. Thanks! :)</h3>
+                {% else %}
+                <h3><a href="http://wikipedia.org/wiki/{{word}}">See Results on Wikipedia</a></h3>
+                    {% for wiki in wiki_results %}
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                              <div class="row">
+                                  <div class="col-xs-12">
+                                    <h4><a href="{{wiki.url}}">{{wiki.title}}</a></h4>
+                                    <p class="wiki-text">{{wiki.summary}}</p> 
+                                  </div>
                               </div>
                           </div>
-                      </div>
-                    </div>
-                {% endfor %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         {% endif %}
     </div>
