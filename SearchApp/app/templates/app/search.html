@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <form action="/" method="GET">
                     <div class="row">
-                        <div class="col-xs-12">
+                        <div class="search col-xs-12">
                             <input class="center text-center form-control" id="query" type="text" name="query" placeholder="Search" required>
                         </div>
                     </div>
@@ -25,13 +25,13 @@
         {% if word %}
             <div class="twitter-results col-xs-12 col-md-6">
                 {% if word %}
-                    <h2>Twitter Results for "{{word}}":</h2> 
+                    <h3>Twitter Results for "{{word}}":</h3> 
                 {% endif %}
                 {% if not twitter_results %}
-                    <h3>Sorry. We are unable to dislay Twitter Results. Please try a different query or try again later. Thanks! :)</h3>
+                    <h4>Sorry. We are unable to dislay Twitter Results. Please try a different query or try again later. Thanks! :)</h4>
                 {% else %}
-                    <h3><a href="http://twitter.com/search?q=/{{word}}">See Results on Twitter</a></h3>
-                    <h4>Search completed in: {{twitter_results.completed_in}} seconds</h4>
+                    <h4><a href="http://twitter.com/search?q=/{{word}}">See Results on Twitter</a></h4>
+                    <h5>Search completed in: {{twitter_results.completed_in}} seconds</h5>
                     {% for tweet in twitter_results %}
                         <div class="panel panel-default">
                           <div class="panel-body">
@@ -53,12 +53,12 @@
             
             <div class="wiki-results col-xs-12 col-md-6">
                 {% if word %}
-                    <h2>Wikipedia Results for "{{word}}":</h2>
+                    <h3>Wikipedia Results for "{{word}}":</h3>
                 {% endif %}
                 {% if not wiki_results %}
-                    <h3>Sorry. We are unable to dislay Wikipedia Results. Please try a different query or try again later. Thanks! :)</h3>
+                    <h4>Sorry. We are unable to dislay Wikipedia Results. Please try a different query or try again later. Thanks! :)</h4>
                 {% else %}
-                <h3><a href="http://wikipedia.org/wiki/{{word}}">See Results on Wikipedia</a></h3>
+                <h4><a href="http://wikipedia.org/wiki/{{word}}">See Results on Wikipedia</a></h4>
                     {% for wiki in wiki_results %}
                         <div class="panel panel-default">
                           <div class="panel-body">

@@ -11,7 +11,7 @@ def search_wikipedia(word):
                 wiki_results.append(wikipedia.page(result, preload=False))
         except wikipedia.DisambiguationError as e:
             #print("disambiguation error on " + result)
-            print(e.with_traceback)
+            #print(e.with_traceback)
             try:
                 for item in e.options:
                     #print("disambiguation error on " + item)

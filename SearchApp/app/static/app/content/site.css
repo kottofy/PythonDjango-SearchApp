@@ -1,5 +1,58 @@
-﻿h1, h2, h3, h4 {
+﻿.search {
+    padding-top: 10px !important;
+}
+
+.navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    background-color: turquoise !important;
+    border: none !important;
+}
+
+.link a {
+    color: black;
+    padding-top: 5px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.link a:hover {
+    color: white !important;
+    text-decoration: none !important;
+    padding-top: 5px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.title a{
+    font-size: 30px !important;
+    color: black !important;
+    padding-top: 5px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.title a:hover{
+    font-size: 30px !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding-top: 5px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+h1, h2, h3, h4 {
     font-family: 'Oswald', sans-serif !important;
+}
+
+h4 a, h5 a {
+    color: darkturquoise !important;
+}
+
+h4 a:hover, h5 a:hover {
+    color: black !important;
+    text-decoration: none !important;
 }
 
 .enter-query-container {
@@ -20,8 +73,7 @@
 }
 
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 40px;
 }
 
 /* Set padding to keep content from hitting the edges */

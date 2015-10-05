@@ -8,26 +8,30 @@
     <link rel="stylesheet" href="/static/app/content/site.css" />
     <link rel="stylesheet" href="/static/app/content/bootstrap.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="../../static/app/scripts/jquery-1.10.2.min.js"></script>
     <script src="../../static/app/scripts/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <h1><a href="">Search Twitter and Wikipedia</a></h1>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><h2><a href="http://kristinottofysearchapp.azurewebsites.net">Home<span class="sr-only">(current)</span></a></h2></li>
-                    <li><h2><a href="https://github.com/kottofy/PythonDjango-SearchApp/blob/master/SearchApp/readme.md">About<span class="sr-only">(current)</span></a></h2></li>
-                    <li><h2><a href="https://github.com/kottofy/PythonDjango-SearchApp">Code<span class="sr-only">(current)</span></a></h2></li>
-                    <li><h2><a href="http://kristinottofy.com">Author<span class="sr-only">(current)</span></a></h2></li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <h1 class="title"><a class="navbar-brand" href="http://kristinottofysearchapp.azurewebsites.net">Search Twitter and Wikipedia</a></h1>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><h3 class="link"><a href="http://kristinottofysearchapp.azurewebsites.net">Home</a><span></span></h3></li>
+        <li><h3 class="link"><a href="https://github.com/kottofy/PythonDjango-SearchApp/blob/master/SearchApp/readme.md">About</a><span></span></h3></li>
+        <li><h3 class="link"><a href="https://github.com/kottofy/PythonDjango-SearchApp">Code</a><span></span></h3></li>
+        <li><h3 class="link"><a href="http://kristinottofy.com">Author</a><span></span></h3></li>
+      </ul>
+    </div>
+  </div>
+</nav>
     {% block content %}{% endblock %}
 </body>
 </html>
-
-{#TODO: Add nav bar with links Home (/), Code (github.com/kottofy), Creator (kristinottofy.com), possibly about page#}
