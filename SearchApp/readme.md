@@ -17,49 +17,46 @@ The Wikipedia search is completed through Python's Wikipedia API (https://pypi.p
 2. layout.html is HTML5 validated. search.html is mostly HTML5 validated except for the href attribute on a element contains "illegal characters".
 3. PageSpeed: Server response time is 8.4 seconds - needs to speed up!!
 
-# PageSpeed Analyzation (http://kristinottofysearchapp.azurewebsites.net/?query=kristinottofy)
- ## PageSpeed positives (as of 10/5/15 11:54 am EST):
-	- *Mobile: 66/100*
-		Passed Rules:
-			- Avoid landing page redirects
-			- Enable compression
-			- Minify HTML
-			- Prioritize visible content
-		User Experience:
-			Passed Rules:
-				- Avoid app install interstitials that hide contentBETA
-				- Avoid plugins
-				- Configure the viewport
-				- Size content to viewport
-				- Use legible font sizes
-	- *Desktop: 54/100*
-		Passed Rules:
-			- Avoid landing page redirects
-			- Enable compression
-			- Minify HTML
-			- Prioritize visible content
- ## PageSpeed negatives  (as of 10/5/15 11:54 am EST):
-	- *Mobile: 66/100*
-		Should fix:
-			- Eliminate render-blocking JavaScript and CSS in above-the-fold content
-			- Reduce server response time
-		Consider fixing:
-			- Leverage browser caching
-			- Optimize images
-			- Minify JavaScript
-			- Minify CSS
-		User Experience:
-			Consider Fixing:
-				- Size tap targets appropriately
-	- *Desktop: 54/100*
-		Should fix:
-			- Reduce server response time
-		Consider fixing:
-			- Eliminate render-blocking JavaScript and CSS in above-the-fold content
-			- Leverage browser caching
-			- Optimize images
-			- Minify JavaScript
-			- Minify CSS
+# PageSpeed Analyzation
+http://kristinottofysearchapp.azurewebsites.net/?query=kristinottofy
+as of 10/5/15 11:54 am EST
+## Mobile: 66/100
+### Should fix:
+- Eliminate render-blocking JavaScript and CSS in above-the-fold content
+- Reduce server response time
+### Consider fixing:
+- Leverage browser caching
+- Optimize images
+- Minify JavaScript
+- Minify CSS
+### Passed Rules:
+- Avoid landing page redirects
+- Enable compression
+- Minify HTML
+- Prioritize visible content
+### User Experience:
+#### Consider Fixing:
+- Size tap targets appropriately
+#### Passed Rules:
+- Avoid app install interstitials that hide contentBETA
+- Avoid plugins
+- Configure the viewport
+- Size content to viewport
+- Use legible font sizes
+## Desktop: 54/100
+### Should fix:
+- Reduce server response time
+### Consider fixing:
+- Eliminate render-blocking JavaScript and CSS in above-the-fold content
+- Leverage browser caching
+- Optimize images
+- Minify JavaScript
+- Minify CSS
+### Passed Rules:
+- Avoid landing page redirects
+- Enable compression
+- Minify HTML
+- Prioritize visible content
 
 # TODO
 1. Move Search bar and Submit button to nav-bar. Explore possibility of new home page with search in the middle.
