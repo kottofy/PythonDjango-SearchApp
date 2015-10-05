@@ -22,17 +22,17 @@ returns a DisambiguationError, the error is parsed and the available pages in th
 this error can happen again on one of those pages, but this application will only add so many results.
 
 # Performance Positives
-1. Handles no results receieved from either Twitter or Wikipedia by displaying message.
-2. If one API is down, the other will still work.
-3. Site is responsive and mobile friendly with a Bootstrap collapsable menu.
-4. Simple Django setup with templates, forms, views, etc. allows for pretty easy to read code.
-5. Twitter Authentication details are not uploaded to GitHub.
-6. Uses HTML5 to require an input.
+- Handles no results receieved from either Twitter or Wikipedia by displaying message.
+- If one API is down, the other will still work.
+- Site is responsive and mobile friendly with a Bootstrap collapsable menu.
+- Simple Django setup with templates, forms, views, etc. allows for pretty easy to read code.
+- Twitter Authentication details are not uploaded to GitHub.
+- Uses HTML5 to require an input.
 
 # Performance Negatives (TODOs)
-1. Asks for twitter authorization at every search. Twitter search is fast but display of results is slow for Twitter and Wikipedia results.
-2. layout.html is HTML5 validated. search.html is mostly HTML5 validated except for the href attribute on a element contains "illegal characters".
-3. PageSpeed: Server response time is 8.4 seconds - needs to speed up!!
+- Asks for twitter authorization at every search. Twitter search is fast but display of results is slow for Twitter and Wikipedia results.
+- layout.html is HTML5 validated. search.html is mostly HTML5 validated except for the href attribute on a element contains "illegal characters".
+- PageSpeed: Server response time is 8.4 seconds - needs to speed up!!
 
 # PageSpeed Analyzation
 http://kristinottofysearchapp.azurewebsites.net/?query=kristinottofy
@@ -90,6 +90,6 @@ as of 10/5/15 11:54 am EST
 3. Redirect to pretty error page when issues are encountered.
 4. Create alert system so admin can know real-time errors.
 5. Have search.html HTML5 validated.
-6. Figure out how to make Twitter results all the same for a particular query.
+~~6. Figure out how to make Twitter results all the same for a particular query.~~
 7. Create DisambiguationError handling function for code readability. 
 8. (Optional-speed up server response preferred!) Display "Working on it..." type of message when query is being processed.
