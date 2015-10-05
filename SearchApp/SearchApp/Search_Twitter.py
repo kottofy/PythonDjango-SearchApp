@@ -26,4 +26,10 @@ def search_twitter(word):
     return twitter_results
 
 # TODO add search twitter by location functionality
+#( geocode – Returns tweets by users located within a given radius of the given latitude/longitude. 
+# The location is preferentially taking from the Geotagging API, but will fall back to their Twitter 
+# profile. The parameter value is specified by “latitide,longitude,radius”, where radius units must 
+# be specified as either “mi” (miles) or “km” (kilometers). Note that you cannot use the near operator 
+# via the API to geocode arbitrary locations; however you can use this geocode parameter to search 
+# near geocodes directly.)
 # TODO require authentication once to speed up performance
