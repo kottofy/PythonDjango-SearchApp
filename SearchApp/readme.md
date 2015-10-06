@@ -14,6 +14,7 @@ and especially [Python Tools for Visual Studio](http://microsoft.github.io/PTVS/
 The Twitter search is completed through [Tweepy](http://tweepy.readthedocs.org/en/v3.4.0/). This applications is
 currently set to use Twitter's REST API which returns a limited amount of results (within a week or so) and does not stream
 live data. It is set to deliver the most recent results. This application has also capped the amount of results to return from the search.
+Searching by location looks at the user's public ip address. Any spoofing will cause disfunction :)
 
 # Getting Wikipedia Results
 The Wikipedia search is completed through [Python's Wikipedia Package](https://pypi.python.org/pypi/wikipedia/).
