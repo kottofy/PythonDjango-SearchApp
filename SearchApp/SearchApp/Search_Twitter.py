@@ -2,7 +2,8 @@
 
 from django.conf import settings
 import tweepy
-from urllib.request import urlopen
+import requests
+import json
 
 def get_twitter_api(twitter_settings):
     
@@ -52,19 +53,21 @@ def search_twitter(word):
 
     return twitter_results
 
-def search_twitter_by_location(request, word):
+def search_twitter_by_location(word):
     print("location on!")
     twitter_results = []
 
     try:
         url = 'http://freegeoip.net/json/'
         try:
-            request = urllib.request.Request(url)
-            response = urllib.request.urlopen(request)
-            print (response.read().decode('utf-8'))
-            latitude=response.latitude
-            longitude = response.longitude
-        except:
+            r = requests.get(url)
+            print("got r")
+            json_obj = json.loads(r.text)
+            print("got json_obj")
+            latitude = str(json_obj['latitude'])
+            longitude = str(json_obj['longitude'])
+        except Exception as e:
+            print(e.with_traceback)
             print("Location could not be determined automatically")
 
         twitter_settings = auth_twitter()
