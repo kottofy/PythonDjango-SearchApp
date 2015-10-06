@@ -85,11 +85,13 @@ as of 10/5/15 11:54 am EST
 - Prioritize visible content
 
 # TODO
-1. Move Search bar and Submit button to nav-bar. Explore possibility of new home page with search in the middle.
-2. Create option to search twitter by user location. See if it's possible to request IP address, use API to search for IP latitude and longitude, use Tweepy GeoCode.
+1. ~~Part 1: Move Search bar and Submit button to nav-bar.~~ 
+1. Part 2: Explore possibility of new home page with search in the middle.
+2. ~~Create option to search twitter by user location. See if it's possible to request IP address, use API to search for IP latitude and longitude, use Tweepy GeoCode.~~
 3. Redirect to pretty error page when issues are encountered.
-4. Create alert system so admin can know real-time errors.
+4. ~~Create alert system so admin can know real-time errors.~~ Now using Azure alerts!
 5. Have search.html HTML5 validated.
 6. ~~Figure out how to make Twitter results all the same for a particular query.~~ Now pulls recent updates!
 7. Create DisambiguationError handling function for code readability. 
 8. (Optional-speed up server response preferred!) Display "Working on it..." type of message when query is being processed.
+9. Add unit tests for searching twitter by location
