@@ -24,7 +24,10 @@
                                   </div>
                                   <div class="col-xs-10">
                                       <h4><a href="http://twitter.com/{{tweet.author.screen_name}}">@{{tweet.author.screen_name}}</a></h4>
-                                      <h5>{{tweet.created_at.month}}/{{tweet.created_at.day}}/{{tweet.created_at.year}} {{tweet.created_at.hour}}:{{tweet.created_at.minute}}</h5>
+                                      <h5>Tweeeted on {{tweet.created_at.month}}/{{tweet.created_at.day}}/{{tweet.created_at.year}} at {{tweet.created_at.hour}}:{{tweet.created_at.minute}}</h5>
+                                      {% if tweet.coordinates %}
+                                        <h6>From {{tweet.coordinates.coordinates.1}},{{tweet.coordinates.coordinates.0}}</h6>
+                                      {% endif %}
                                       <p>{{tweet.text}}</p>
                                   </div>
                               </div>

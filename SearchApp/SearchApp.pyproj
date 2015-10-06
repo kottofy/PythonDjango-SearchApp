@@ -6,7 +6,7 @@
     <RootNamespace>SearchApp</RootNamespace>
     <InterpreterId>{2f222b9b-2cc5-4533-829a-86964031f876}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
-    <NameOfLastUsedPublishProfile>kristinottofysearchapp</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>KristinOttofySearchAppDevelopment</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -64,6 +64,7 @@
   <ItemGroup>
     <Content Include="app\templates\app\search.html" />
     <None Include="kristinottofysearchapp.pubxml" />
+    <None Include="KristinOttofySearchAppDevelopment.pubxml" />
     <Content Include="readme.md">
       <SubType>Code</SubType>
     </Content>

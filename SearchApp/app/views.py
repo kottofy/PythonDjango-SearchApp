@@ -17,7 +17,7 @@ def query(request):
         if word is not None:                            # if a query exists
 
             if box:
-                twitter_results = search_twitter_by_location(word)
+                twitter_results = search_twitter_by_location(request, word)
             else:
                 twitter_results = search_twitter(word)      # search Twitter and
                 
